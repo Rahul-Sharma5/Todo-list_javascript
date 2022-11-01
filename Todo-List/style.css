@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@500&family=Josefin+Sans:wght@200;300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&family=Rubik:wght@500;600;700;800&display=swap');
+
+/***** Global css starts here *****/
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --primary-color: linear-gradient(135deg, #ec225e,#e71ba6);
+    --secondary-color: linear-gradient(135deg, #ec225e,#ec225e);
+    /* --accent-color: #0BC9F7; */
+}
+html{
+    font-size: 62.5%;
+}
+/***** Global css ends here *****/
+
+/***** main css starts here *****/
+body{
+    /* background: var(--primary-color); */
+    background-image: url(./image/img64.webp);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    padding: 10em 0em;
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+h1{
+    color: rgb(239, 30, 96);
+    margin-bottom: 26px;
+    font-size: 3.5rem;
+    padding: 1.2rem;
+    text-transform:uppercase;
+}
+span{
+    color: #fff;
+}
+.text{
+    /* font-size: 150px; */
+    /* font-weight: 800; */
+    outline: none;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #5335cf 0%, #ec225e 25%, #f12868 50%, #de005e 75%, #5335cf 100%);
+    background-size: 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    animation: animate 10s linear infinite;
+  }
+  @keyframes animate {
+    to{
+      background-position: 400%;
+    }
+  }  
+.container{
+    padding: 8em;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;   
+    background: rgba(255, 255, 255, 0.26);
+    background-color: rgba(255,255,255,0.06);
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.475);
+    box-shadow: 20px 20px 22px rgba(0,0,0,0.2);
+    border-radius: 16px;
+}
+/***** main css ends here *****/
+
+/***** Css for add new task starts here *****/
+#newTask{
+    /* background: white; */
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgb(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.475);
+    
+}
+#userInput{
+    width: 100%;
+    font-size: 1.3rem;
+    padding: 0.7rem;
+    border-radius: 5px;
+    border: 2px solid gainsboro;
+    color: #fff;
+    border: 0.125rem solid #fff;
+    background: transparent;
+}
+#userInput:focus{
+    outline: none;
+    border: 2px solid var(--accent-color);
+}
+#push, #save{
+    margin-top: 0.5em;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 0.8em;
+    cursor: pointer;
+}
+/***** Css for add new task ends here *****/
+
+/***** Css for tasks list starts here *****/
+#tasksList{
+    /* background: white; */
+    margin-top: 2em;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgb(0, 0, 0, 0.3);
+    padding: 1em;
+    border: 1px solid rgba(255, 255, 255, 0.475);
+}
+/***** Css for tasks list ends here *****/
+
+/***** Css for search tasks starts here *****/
+#searchTask{
+    display: flex;
+    flex-direction: column;
+    
+}
+#deleteAll{
+    margin-bottom: 0.6em;
+    width: 100%;
+    padding: 0.8em;
+    border: none;
+    background: var(--secondary-color);
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+}
+#searchBar{
+    width: 100%;
+    font-size: 1.3rem;
+    padding: 0.7em;
+    border-radius: 5px;
+    border: 2px solid gainsboro;
+    color: #111111;
+    border: 0.125rem solid #fff;
+    background: transparent;
+}
+#searchBar:focus{
+    outline: none;
+    /* border: 2px solid var(--accent-color); */
+}
+/***** Css for search tasks ends here *****/
+
+/***** Css for all tasks starts here *****/
+#tasks{
+    display: flex;
+    flex-direction: column;
+    /* background: white; */
+    border-radius: 5px;
+    margin-top: 1.5em;
+}
+#noTasks{
+    font-size: 1.3rem;
+    color: white;
+}
+/***** Css for all tasks ends here *****/
+
+/***** Css for single task starts here *****/
+#task{
+    display: flex;
+    flex-direction: column;
+    /* background: white; */
+    border-radius: 5px;
+    width: 100%;
+    padding: 1em 1.5em;
+    margin-bottom: 1em;
+    /* border-left: 4px solid var(--accent-color); */
+    box-shadow: 0px 2px 4px rgb(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.463);
+    /* color: #fff; */
+}
+#taskName{
+    font-size: 1.7rem;
+    text-transform: capitalize;
+    color: #fff;
+}
+#actions{
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em;
+}
+#edit, #delete{
+    width: 48%;
+    padding: 1em;
+    outline: none;
+    border: none;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+#delete{
+    background: var(--secondary-color);
+}
+/***** Css for single task ends here *****/
+
+/***** Css for warning message starts here *****/
+#snackBar{
+    visibility: hidden;
+    min-width: 25em;
+    margin-left: -12em;
+    background: white;
+    color: black;
+    text-align: center;
+    border-radius: 5px;
+    padding: 1.6em;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 5em;
+}
+
+#snackBar.show{
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+@keyframes fadein{
+    from {bottom: 0; opacity: 0;}
+    to{bottom: 5em; opacity: 1;}
+}
+@keyframes fadeout{
+    from {bottom: 5em; opacity: 1;}
+    to{bottom: 0; opacity: 0;}
+}
+
+/***** Css for medium to large screens starts here *****/
+@media only screen and (min-width: 500px){
+    .container{
+        padding: 8em;
+        width: 100%;
+        max-width: 900px;
+    }
+    #newTask{
+        display: flex;
+        justify-content: space-between;
+        padding: 2em;
+    }
+    #userInput{
+        width: 60%;
+        font-size: 1.6rem;
+    }
+    #push, #save{
+        margin-top: 0;
+        width: 38%;
+        font-size: 1.6rem;
+    }
+    #tasksList{
+        padding: 2em;
+    }
+    #searchTask{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #deleteAll{
+        margin-bottom: 0;
+        width: 38%;
+        padding: 0.7em;
+    }
+    #searchBar{
+        width: 60%;
+        padding: 0.7em;
+    }
+    #task{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #taskName{
+        width: 60%;
+        font-size: 1.7rem;
+    }
+    #actions{
+        margin-top: 0;
+        width: 40%;
+    }
+    #edit, #delete{
+        font-size: 1.2rem;
+        padding: 1em 0.7em;
+    }
+}
+
+@media (max-width: 767px) {
+    /* Custom CSS */
+    h1{
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+    body{
+        font-family: 'Poppins', sans-serif;
+        background-image: url('./image/devimg.webp');
+        background-size: cover;
+        /* background: #000; */
+        /* background-repeat: repeat; */
+        /* background-attachment: fixed; */
+        /* background: linear-gradient(135deg, rgba(0,0,0,1) 0%, rgba(25,25,25,1) 100%); */
+    }
+
+    /* About */
+}
+@media (max-width: 900px){
+    .container{
+        padding: 4em;
+        width: 80%;
+    }
+    h1{
+        font-size: 3rem;
+        line-height: 2rem;
+    }
+}
+
+/***** Css for medium to large screens ends here *****/
